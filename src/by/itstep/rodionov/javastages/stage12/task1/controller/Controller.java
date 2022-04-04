@@ -8,10 +8,10 @@ public class Controller {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Printer.print("Input 4 numbers:");
-//         int x1 = sc.nextInt();
-//         int x2 = sc.nextInt();
-//         int y1 = sc.nextInt();
-//         int y2 = sc.nextInt();
+         int x1 = sc.nextInt();
+         int x2 = sc.nextInt();
+         int y1 = sc.nextInt();
+         int y2 = sc.nextInt();
 
         boolean result = true;
 
