@@ -97,7 +97,6 @@ public class ChessLogic {
     public static boolean checkQueenStep (int x1, int y1, int x2, int y2){
         boolean rook = checkRookStep(x1, y1, x2, y2);
         boolean elephant = checkElephantStep(x1, y1, x2, y2);
-        boolean king = checkKingStep(x1, y1, x2, y2);
-        return rook || elephant || king;
+        return rook || elephant ;
     }
 }
