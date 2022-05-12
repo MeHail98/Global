@@ -188,4 +188,47 @@ public class Controller {
         int[] c = concatTwoSortedArrays(a,b);
         print(Arrays.toString(c));
     }
+
+    public static int runRecursion(int n) {
+//        Найти N троек чисел пифагора(натуральные числа а б и с называются числами пифагора,
+//        если выполняется условвие a квадрат + b квадрат = с)
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            for (int j = 2; j < n; j++) {
+                for (int k = 2; k < n; k++) {
+                    if (k * k + j * j == i * i) {
+                        count++;
+                        System.out.printf("%d*%d + %d*%d = %d*%d\n", k, k, j, j, i, i);
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+        public static int Recursion(int n) {
+        int count = 0;
+        if (n < 5) return 0;
+        else {
+            for (int i = 2; i < n; i++) {
+                for (int j = 2; j < n; j++) {
+                    if(i*i + j*j == n*n){
+                        count++;
+                        System.out.printf("%d*%d + %d*%d = %d*%d\n",i,i,j,j,n,n);
+                }
+            }
+        }
+            return count + runRecursion(n-1);
+        }
+    }
+
+    public static double sequence(int x, int n) {
+        if(n == 1) return x;
+        return (x * sequence (x,n-1) / n);
+    }
+
+    public static int multiple(int x, int n) {
+        if (n == 1) return x;
+        return (x*multiple(x, n-1));
+    }
 }

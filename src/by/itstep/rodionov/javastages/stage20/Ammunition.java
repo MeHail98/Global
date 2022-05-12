@@ -1,24 +1,24 @@
 package by.itstep.rodionov.javastages.stage20;
 
-public class AmmunitionInformation {
+public class Ammunition {
 
     private int price;
     private String material;
     private String color;
+    private int weight;
 
-
-    public AmmunitionInformation(int price, String material, String color) {
-        super();
+    public Ammunition(int price, String material, String color, int weight) {
         this.price = price;
         this.material = material;
         this.color = color;
+        this.weight = weight;
     }
 
-    public AmmunitionInformation(int price) {
+    public Ammunition(int price) {
         this.price = price;
     }
 
-    public AmmunitionInformation() {
+    public Ammunition() {
     }
 
     public int getPrice() {
@@ -45,10 +45,17 @@ public class AmmunitionInformation {
         this.color = color;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight){
+        this.weight = weight;
+    }
+
     @Override
     public String toString() {
-        return "AmmunitionInformation{" +
-                "price=" + price +
+        return  "price=" + price +
                 ", material='" + material + '\'' +
                 ", color='" + color + '\'' +
                 '}';

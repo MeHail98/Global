@@ -1,19 +1,16 @@
 package by.itstep.rodionov.javastages.stage20;
 
-public class Helmet extends AmmunitionInformation {
+public class Helmet extends Ammunition {
 
     private String gender;
-    private String imprisoned;
 
-    public Helmet(int price, String material, String color, String gender, String imprisoned) {
-        super(price, material, color);
+    public Helmet(int price, String material, String color, int weight, String gender) {
+        super(price, material, color,weight);
         this.gender = gender;
-        this.imprisoned = imprisoned;
     }
 
-    public Helmet(String gender, String imprisoned) {
+    public Helmet(String gender) {
         this.gender = gender;
-        this.imprisoned = imprisoned;
     }
 
     public Helmet(){
@@ -27,20 +24,10 @@ public class Helmet extends AmmunitionInformation {
         this.gender = gender;
     }
 
-    public String getImprisoned() {
-        return imprisoned;
-    }
-
-    public void setImprisoned(String imprisoned) {
-        this.imprisoned = imprisoned;
-    }
-
     @Override
     public String toString() {
         return "Helmet{" +
-                "gender='" + gender + '\'' +
-                ", imprisoned='" + imprisoned + '\'' +
-                "} " + super.toString();
+                "gender=" + gender + ", "+ super.toString();
     }
 
 }

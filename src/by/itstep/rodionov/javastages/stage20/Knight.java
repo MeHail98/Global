@@ -14,9 +14,12 @@ public class Knight {
         this.sword = sword;
     }
 
-    public int AllPrice(){
-        int sum = helmet.getPrice() + sword.getPrice();
-        return sum;
+    public int calcAllPrice(){
+        return helmet.getPrice() + sword.getPrice();
+    }
+
+    public int calcAmmunitionWeight(){
+        return helmet.getWeight() + sword.getWeight();
     }
 
 }
